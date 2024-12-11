@@ -37,7 +37,7 @@ jobs:
         name: Check that magika can be installed with uv
         run: mkdir /tmp/test-uv && cd /tmp/test-uv && uv init && uv add magika && cd - && rm -rf /tmp/test-uv
       - if: matrix.platform.runner == 'windows-latest'
-        name: Check that `uv add magika.whl` works on Windows
+        name: Check that magika install with uv works on Windows
         shell: pwsh
         run: |
           mkdir C:\test-uv
